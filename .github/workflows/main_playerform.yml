@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - LoLPlayerForm
+name: Build and deploy Node.js app to Azure Web App - playerform
 
 on:
   push:
@@ -51,15 +51,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_102B935BF8824C8B9333A8BECE29B585 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_9599019D2D794906BE2A5A49B2C63ADF }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_4C89B223957E4A129930DEDB29E5D3EE }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_7DB060B2B66741DABA9A509F7C94BE69 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_F52305DCD26544719D003B727259066B }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_4E5DD37FC2DF4D39B0FA5E20DE18D900 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'LoLPlayerForm'
+          app-name: 'playerform'
           slot-name: 'Production'
           package: .
           
